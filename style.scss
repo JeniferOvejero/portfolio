@@ -1,0 +1,42 @@
+$primary-color: #8B32F4;
+$dark-purple-color: #5320A6;
+$light-color:  #F0EFE9;
+$dark-color: #0E0D0D;
+
+body{
+    background-color: #F0EFE9;
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+    margin-inline-end: 210px;
+    li {
+        margin-inline: 8px;
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $light-color;
+        }
+    }
+}
+
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+.hero_shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;          // cobre metade da largura da tela
+  height: 100vh;        // altura total da tela
+
+  background: linear-gradient(135deg, #6f00ff, #b44bff); // gradiente roxo
+
+  clip-path: polygon(100% 0%, 0% 0%, 50% 25%, 0% 50%, 100% 50%);
+
+  z-index: 1; // fica atrás dos textos e botões
+}

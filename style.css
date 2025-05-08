@@ -1,0 +1,35 @@
+body {
+  background-color: #F0EFE9;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  margin-inline-end: 210px;
+}
+nav ul li {
+  margin-inline: 8px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #F0EFE9;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+.hero_shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(135deg, #6f00ff, #b44bff);
+  clip-path: polygon(100% 0%, 0% 0%, 50% 25%, 0% 50%, 100% 50%);
+  z-index: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
