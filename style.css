@@ -1,8 +1,13 @@
 body {
-  background-color: #F0EFE9;
+  background-color: #0E0D0D;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
 }
 
 nav ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: end;
   margin-inline-end: 210px;
@@ -14,22 +19,74 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #F0EFE9;
+  font-weight: 500;
+}
+
+#apresentacao {
+  margin: 0 5vw;
+}
+#apresentacao p, #apresentacao h1 {
+  margin: 0;
+}
+
+#botoes {
+  margin: 8px 5vw;
+}
+#botoes button {
+  margin: 0 8px 0 0;
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+#botoes button[name=conheca-projetos] {
+  border: 2px solid #5320A6;
+  background-color: #8B32F4;
+  box-shadow: -2px 2px 0 #3e0e86;
+  color: white;
+}
+#botoes button[name=contato] {
+  border: 2px solid #0E0D0D;
+  background-color: transparent;
+  box-shadow: -2px 2px 0 #0E0D0D;
+  color: #0E0D0D;
+}
+
+#container {
+  width: 80%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+#home {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#home-esquerda {
+  margin: 25vh 0;
+}
+
+#home-direita {
+  height: 100%;
+  width: 60%;
+}
+
+#fundo {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #6f00ff, #b44bff);
+  clip-path: polygon(100% 0%, 0% 0%, 50% 50%, 0% 100%, 100% 100%);
 }
 
 img {
+  position: absolute;
+  bottom: 50%;
+  left: 60%;
+  transform: translate(-50%, 50%);
   height: 300px;
   width: 300px;
-}
-
-.hero_shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100vh;
-  background: linear-gradient(135deg, #6f00ff, #b44bff);
-  clip-path: polygon(100% 0%, 0% 0%, 50% 25%, 0% 50%, 100% 50%);
-  z-index: 1;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */

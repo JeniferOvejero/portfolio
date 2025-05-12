@@ -4,10 +4,15 @@ $light-color:  #F0EFE9;
 $dark-color: #0E0D0D;
 
 body{
-    background-color: #F0EFE9;
+    background-color: $dark-color;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
 }
 
 nav ul{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: end;
     margin-inline-end: 210px;
@@ -17,26 +22,69 @@ nav ul{
         a{
             text-decoration: none;
             color: $light-color;
+            font-weight: 500;
+        }
+    }
+}
+#apresentacao{
+    margin: 0 5vw;
+    p, h1{
+        margin: 0;
+    }
+}
+#botoes{
+    margin: 8px 5vw;
+    button{
+        margin: 0 8px 0 0;
+        height: 32px;
+        border-radius: 8px;
+        font-weight: 600;
+        &[name="conheca-projetos"]{
+            border: 2px solid $dark-purple-color;
+            background-color: $primary-color;
+            box-shadow: -2px 2px 0 #3e0e86;
+            color: white;
+        }
+        &[name="contato"]{
+            border: 2px solid $dark-color;
+            background-color: transparent;
+            box-shadow: -2px 2px 0 $dark-color;
+            color: $dark-color;
         }
     }
 }
 
-
-img{
-    height: 300px;
-    width: 300px;
+#container{
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+}
+#home{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+#home-esquerda{
+    margin: 25vh 0;
+}
+#home-direita{
+    height: 100%;
+    width: 60%;
 }
 
-.hero_shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;          // cobre metade da largura da tela
-  height: 100vh;        // altura total da tela
+#fundo{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #6f00ff, #b44bff);
+  clip-path: polygon(100% 0%, 0% 0%, 50% 50%, 0% 100%, 100% 100%);
+}
 
-  background: linear-gradient(135deg, #6f00ff, #b44bff); // gradiente roxo
-
-  clip-path: polygon(100% 0%, 0% 0%, 50% 25%, 0% 50%, 100% 50%);
-
-  z-index: 1; // fica atrás dos textos e botões
+img{
+    position: absolute;
+    bottom: 50%;
+    left: 60%;
+    transform: translate(-50%, 50%);
+    height: 300px;
+    width: 300px;
+    z-index: 10;
 }
