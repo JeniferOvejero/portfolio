@@ -1,6 +1,7 @@
 @use 'variaveis' as v;
 
 #home{
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 100vh;

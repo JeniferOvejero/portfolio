@@ -2,7 +2,23 @@
 
 #projetos{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     h2{
         color: white;
+        display: flex;
+        justify-content: end;
+        padding-inline-end: 210*2.5px;
+    }
+}
+#carrossel{
+    display: flex;
+    justify-content: space-around;
+    .carrossel-item{
+        background-color: blue;
+        height: 702px;
+        width: 560px;
+        border-radius: 24px;
     }
 }
