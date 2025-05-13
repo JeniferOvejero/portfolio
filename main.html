@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portifólio</title>
 </head>
 <body>
     <div id="container">
+        <div id="fundo"></div>
         <section id="home">
             <div id="home-esquerda">
                 <div id="apresentacao">
@@ -21,24 +22,29 @@
                 
             </div>
             <div id="home-direita">
-                <div id="fundo">
-                    <nav>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#projetos">Projetos</a></li>
-                            <li><a href="#habilidades">Habilidades</a></li>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
                 <img id="avatar" src="/assets/avatar.svg" alt="Atavar">
             </div>
         </section>
-        <div id="projetos">Projetos</div>
-        <div id="habilidades">Habilidades</div>
-        <div id="sobre">Sobre</div>
-        <div id="contato">Contato</div>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div id="carrossel">
+                <div class="carrossel-item">item1</div>
+                <div class="carrossel-item">item2</div>
+                <div class="carrossel-item">item3</div>
+            </div>
+        </section>
+        <section id="habilidades">Habilidades</section>
+        <section id="sobre">Sobre</section>
+        <section id="contato">Contato</section>
     </div>
 </body>
 </html>

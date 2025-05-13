@@ -1,0 +1,85 @@
+@use 'variaveis' as v;
+
+#home{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home-esquerda{
+    margin: 25vh 0;
+    #apresentacao{
+        margin: 0 0 0 5vw;
+        p, h1{
+            margin: 0;
+        }
+        p{
+            font-size: 24px;
+        }
+    }
+    #botoes{
+        margin: 8px 0 0 5vw;
+        button{
+            margin: 0 8px 0 0;
+            height: 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            &[name="conheca-projetos"]{
+                border: 2px solid v.$dark-purple-color;
+                background-color: v.$primary-color;
+                box-shadow: -2px 2px 0 #3e0e86;
+                color: white;
+                &:hover{
+                background-color: #3e0e86;
+                cursor: pointer;
+            }
+            }
+            &[name="contato"]{
+                border: 2px solid v.$dark-color;
+                background-color: transparent;
+                box-shadow: -2px 2px 0 v.$dark-color;
+                color: v.$dark-color;
+                &:hover{
+                background-color: v.$dark-color;
+                color: white;
+                cursor: pointer;
+            }
+            }
+            
+        }
+    }
+}
+
+#home-direita{
+    height: 100%;
+    width: 100%;
+    nav ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: end;
+        padding-inline-end: 210px;
+        li {
+            margin: 8px 0 0 16px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: v.$light-color;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+img{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 300px;
+    width: 300px;
+    z-index: 10;
+}
