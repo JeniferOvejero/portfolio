@@ -11,6 +11,7 @@
 }
 #home-esquerda #apresentacao {
   margin: 0 0 0 5vw;
+  width: 500px;
 }
 #home-esquerda #apresentacao p, #home-esquerda #apresentacao h1 {
   margin: 0;
@@ -22,6 +23,7 @@
   margin: 8px 0 0 5vw;
 }
 #home-esquerda #botoes button {
+  padding: 8px;
   margin: 0 8px 0 0;
   height: 32px;
   border-radius: 8px;
@@ -96,14 +98,67 @@ img {
 }
 
 #carrossel {
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+}
+#carrossel .slides {
+  display: flex;
+  gap: 48px;
+  transition: transform 0.4s ease;
+  padding-inline: 48px;
 }
 #carrossel .carrossel-item {
-  background-color: blue;
-  height: 702px;
-  width: 560px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0E0D0D;
+  height: 600px;
+  width: 500px;
   border-radius: 24px;
+}
+#carrossel .btn-navegacao {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+#carrossel .btn-navegacao.esquerda {
+  left: 0;
+}
+#carrossel .btn-navegacao.direita {
+  right: 0;
+}
+
+a[name=galeria] {
+  align-self: center;
+}
+a[name=galeria] button {
+  align-self: center;
+  margin: 0 8px 0 0;
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  width: 100px;
+  padding: 8px;
+  border: 2px solid #0E0D0D;
+  background-color: white;
+  box-shadow: -2px 2px 0 #0E0D0D;
+  color: #0E0D0D;
+}
+a[name=galeria] button:hover {
+  background-color: #0E0D0D;
+  color: white;
+  cursor: pointer;
 }
 
 #habilidades {

@@ -12,13 +12,72 @@
         padding-inline-end: 210*2.5px;
     }
 }
-#carrossel{
+#carrossel {
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+
+  .slides {
     display: flex;
-    justify-content: space-around;
-    .carrossel-item{
-        background-color: blue;
-        height: 702px;
-        width: 560px;
-        border-radius: 24px;
+    gap: 48px;
+    transition: transform 0.4s ease;
+    padding-inline: 48px;
+  }
+
+  .carrossel-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: v.$dark-color;
+    height: 600px;
+    width: 500px;
+    border-radius: 24px;
+  }
+
+  .btn-navegacao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 10;
+
+    &.esquerda {
+      left: 0;
+    }
+
+    &.direita {
+      right: 0;
+    }
+  }
+}
+
+a[name='galeria']{
+    align-self: center;
+
+    button{
+    align-self: center;
+    margin: 0 8px 0 0;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100px;
+    padding: 8px;
+    border: 2px solid v.$dark-color;
+    background-color: white;
+    box-shadow: -2px 2px 0 v.$dark-color;
+    color: v.$dark-color;
+    &:hover{
+        background-color: v.$dark-color;
+        color: white;
+        cursor: pointer;
+        }
     }
 }
