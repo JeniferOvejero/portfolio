@@ -1,5 +1,5 @@
 const carrossel = document.getElementById('carrossel-slides');
-const itemLargura = 450 + 32;
+const itemLargura = 700 + 48;
 
 let index = 0;
 
