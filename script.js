@@ -22,7 +22,10 @@ function moverCarrossel(direcao) {
   sass: "https://profilinator.rishav.dev/skills-assets/sass-original.svg",
   html: "https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg",
   css: "https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg",
-  javascript: "https://profilinator.rishav.dev/skills-assets/javascript-original.svg"
+  javascript: "https://profilinator.rishav.dev/skills-assets/javascript-original.svg",
+  nodejs: "https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg",
+  react: "https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg",
+  python: "https://profilinator.rishav.dev/skills-assets/python-original.svg"
 };
 
 fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD_u0fe0J7OpoZQTHnhqIZ9HLi7ZJYV8c6idmA/exec")
@@ -37,7 +40,7 @@ fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD
         .map(tec => {
           const key = tec.trim().toLowerCase();
           const src = techIcons[key] || "";
-          if (!src) return ''; // se não encontrar o ícone, não exibe nada
+          if (!src) return `| ${key} | `;
           return `<img src="${src}" alt="${tec.trim()}" class="imagem-tecnologia">`;
         })
         .join('');

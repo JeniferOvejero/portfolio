@@ -63,10 +63,14 @@
       }
       &-tecnologias{
         margin: 12px;
+        display: flex;
+        align-items: center;
+        color: white;
         .imagem-tecnologia{
           height: 50px;
           width: 50px;
           background-color: white;
+          color: white;
           margin: 12px;
           border-radius: 100%;
           object-fit: contain;
