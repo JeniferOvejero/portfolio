@@ -94,23 +94,23 @@
   color: white;
   display: flex;
   justify-content: end;
-  padding-inline-end: 525px;
+  padding-inline: 70%;
 }
 
-#carrossel {
+#carrossel, #itens-carregando {
   position: relative;
   overflow: visible;
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
 }
-#carrossel .slides {
+#carrossel .slides, #carrossel #itens-carregando, #itens-carregando .slides, #itens-carregando #itens-carregando {
   display: flex;
   gap: 48px;
   transition: transform 0.4s ease;
   padding-inline: 48px;
 }
-#carrossel .carrossel-item {
+#carrossel .carrossel-item, #itens-carregando .carrossel-item {
   position: relative;
   flex-shrink: 0;
   display: flex;
@@ -121,13 +121,13 @@
   width: 700px;
   border-radius: 24px;
 }
-#carrossel .carrossel-item:hover {
+#carrossel .carrossel-item:hover, #itens-carregando .carrossel-item:hover {
   transform: scale(1.03);
   transform-origin: center center;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-#carrossel .carrossel-item .item {
+#carrossel .carrossel-item .item, #itens-carregando .carrossel-item .item {
   height: 100%;
   width: 100%;
   left: 50%;
@@ -135,7 +135,7 @@
   display: flex;
   flex-direction: column;
 }
-#carrossel .carrossel-item .item-imagem {
+#carrossel .carrossel-item .item-imagem, #itens-carregando .carrossel-item .item-imagem {
   align-self: center;
   background-color: white;
   height: 350px;
@@ -143,17 +143,17 @@
   border-radius: 12px;
   margin: 12px;
 }
-#carrossel .carrossel-item .item-titulo {
+#carrossel .carrossel-item .item-titulo, #itens-carregando .carrossel-item .item-titulo {
   margin: 0 24px;
   color: white;
 }
-#carrossel .carrossel-item .item-tecnologias {
+#carrossel .carrossel-item .item-tecnologias, #itens-carregando .carrossel-item .item-tecnologias {
   margin: 12px;
   display: flex;
   align-items: center;
   color: white;
 }
-#carrossel .carrossel-item .item-tecnologias .imagem-tecnologia {
+#carrossel .carrossel-item .item-tecnologias .imagem-tecnologia, #itens-carregando .carrossel-item .item-tecnologias .imagem-tecnologia {
   height: 50px;
   width: 50px;
   background-color: white;
@@ -164,7 +164,34 @@
   padding: 5px;
   box-sizing: border-box;
 }
-#carrossel .btn-navegacao {
+#carrossel .item-carregando, #itens-carregando .item-carregando {
+  height: 500px;
+  width: 700px;
+  background-color: #0E0D0D;
+  border-radius: 24px;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+#carrossel .item-carregando:nth-child(1), #itens-carregando .item-carregando:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 1;
+}
+#carrossel .item-carregando:nth-child(2), #itens-carregando .item-carregando:nth-child(2) {
+  animation-delay: 0.5s;
+  opacity: 0.85;
+}
+#carrossel .item-carregando:nth-child(3), #itens-carregando .item-carregando:nth-child(3) {
+  animation-delay: 1s;
+  opacity: 0.7;
+}
+#carrossel .btn-navegacao, #itens-carregando .btn-navegacao {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -176,10 +203,10 @@
   cursor: pointer;
   z-index: 10;
 }
-#carrossel .btn-navegacao.esquerda {
+#carrossel .btn-navegacao.esquerda, #itens-carregando .btn-navegacao.esquerda {
   left: 0;
 }
-#carrossel .btn-navegacao.direita {
+#carrossel .btn-navegacao.direita, #itens-carregando .btn-navegacao.direita {
   right: 0;
 }
 

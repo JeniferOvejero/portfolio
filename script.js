@@ -1,4 +1,5 @@
 const carrossel = document.getElementById('carrossel-slides');
+const carregandoItem = document.getElementById("itens-carregando");
 const itemLargura = 700 + 48;
 
 let index = 0;
@@ -31,6 +32,9 @@ function moverCarrossel(direcao) {
 fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD_u0fe0J7OpoZQTHnhqIZ9HLi7ZJYV8c6idmA/exec")
   .then(response => response.json())
   .then(dados => {
+
+    carregandoItem.style.display = "none";
+
     dados.forEach(projeto => {
       const item = document.createElement("div");
       item.className = "carrossel-item";

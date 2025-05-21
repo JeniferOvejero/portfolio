@@ -9,17 +9,17 @@
         color: white;
         display: flex;
         justify-content: end;
-        padding-inline-end: 210*2.5px;
+        padding-inline: 70%;
     }
 }
-#carrossel {
+#carrossel,  #itens-carregando{
   position: relative;
   overflow: visible;
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
 
-  .slides {
+  .slides, #itens-carregando {
     display: flex;
     gap: 48px;
     transition: transform 0.4s ease;
@@ -80,6 +80,29 @@
       }
     }
   }
+  
+  .item-carregando {
+    height: 500px;
+    width: 700px;
+    background-color: v.$dark-color;
+    border-radius: 24px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@for $i from 1 through 3 {
+  .item-carregando:nth-child(#{$i}) {
+    animation-delay: ($i - 1) * 0.5s;
+    opacity: 1 - ($i - 1) * 0.15;
+  }
+}
 
   .btn-navegacao {
     position: absolute;
