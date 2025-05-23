@@ -24,7 +24,7 @@ html, body{
 h1{
     font-size: 40px;
 }
-#container{
+#container{    
     position: relative;
     min-height: 100vh;
 }
@@ -34,7 +34,20 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #6f00ff, #b44bff, #6f00ff);
+    background: linear-gradient(
+                                180deg,
+                                v.$dark-purple-color 0%,
+                                v.$primary-color 10%,
+                                v.$primary-color 65%,
+                                v.$dark-purple-color 100%
+                                );
+
     clip-path: polygon(100% 0%, 50% 0%, 75% 10%, 0% 40%, 0% 100%, 100% 100%, 100% 40%, 75% 30%, 100% 20%);
     z-index: -1;
+}
+.coluna-dupla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
