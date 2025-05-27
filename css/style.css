@@ -245,15 +245,18 @@ a[name=galeria] button:hover {
   align-self: center;
   color: white;
 }
-
-#lista-habilidades {
-  border-right: 2px solid #EFEFEF;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 24px;
-  justify-items: center;
+#habilidades-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  border-right: 2px solid #EFEFEF;
+}
+#habilidades-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
 .item-habilidade {
@@ -287,6 +290,33 @@ a[name=galeria] button:hover {
 #contato h2 {
   align-self: center;
   color: white;
+}
+#contato-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contato-lista {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+#contato button {
+  color: white;
+  height: 80px;
+  width: 30vw;
+  background-color: rgba(36, 40, 52, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+#contato button:hover {
+  cursor: pointer;
 }
 
 * {

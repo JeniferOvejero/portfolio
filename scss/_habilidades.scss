@@ -10,15 +10,19 @@
         align-self: center;
         color: white;
     }
+    &-container{
+      height: 80%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px solid v.$light-color; 
+    }
+    &-lista {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
 }
-#lista-habilidades {
-    border-right: 2px solid v.$light-color;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 24px;
-  justify-items: center;
-  align-items: center;
 }
 .item-habilidade {
   height: 80px;

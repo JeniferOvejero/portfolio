@@ -1,6 +1,6 @@
 const carrossel = document.getElementById('carrossel-slides');
 const carregandoItem = document.getElementById("itens-carregando");
-const listaHabilidades = document.getElementById("lista-habilidades");
+const listaHabilidades = document.getElementById("habilidades-lista");
 const itemLargura = 700 + 48;
 
  const techIcons = {
@@ -29,8 +29,6 @@ function moverCarrossel(direcao) {
     const deslocamento = index * itemLargura;
     carrossel.style.transform = `translateX(-${deslocamento}px)`;
 }
-
- // Carregar dados do Google Sheets via Web App
 
 fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD_u0fe0J7OpoZQTHnhqIZ9HLi7ZJYV8c6idmA/exec")
   .then(response => response.json())
@@ -82,3 +80,5 @@ function preencherHabilidades(){
   }
 
   preencherHabilidades();
+
+  //document.getElementsByName("linkein").
