@@ -330,6 +330,7 @@ html, body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: transparent;
   width: 100%;
+  height: 400vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -341,7 +342,7 @@ h1 {
 
 #container {
   position: relative;
-  min-height: 100vh;
+  height: 100%;
 }
 
 #fundo {
@@ -349,9 +350,9 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 400vh;
   background: linear-gradient(180deg, #7D53FF 0%, #7D53FF 10%, #7D53FF 65%, #7D53FF 100%);
-  clip-path: polygon(100% 0%, 50% 0%, 75% 10%, 0% 40%, 0% 100%, 100% 100%, 100% 40%, 75% 30%, 100% 20%);
+  clip-path: polygon(100% 0%, 50% 0%, 75% 12.5%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 75% 37.5%, 100% 25%);
   z-index: -1;
 }
 

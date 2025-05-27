@@ -9,7 +9,7 @@ const itemLargura = 700 + 48;
   html: "https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg",
   css: "https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg",
   javascript: "https://profilinator.rishav.dev/skills-assets/javascript-original.svg",
-  nodejs: "https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg",
+  nodejs: "https://img.icons8.com/fluent/512/node-js.png",
   react: "https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg",
   python: "https://profilinator.rishav.dev/skills-assets/python-original.svg",
   c: "https://profilinator.rishav.dev/skills-assets/c-original.svg"
