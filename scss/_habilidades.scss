@@ -1,14 +1,12 @@
 @use 'variaveis' as v;
 
 #habilidades{
-    height: 100vh;
-    width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 32px 0;
     & h2{
         align-self: center;
         color: white;
+        margin: 32px 0;
     }
     &-container{
       height: 80%;
@@ -16,7 +14,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-right: 2px solid v.$light-color; 
     }
     &-lista {
       display: grid;

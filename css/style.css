@@ -94,7 +94,7 @@
   color: white;
   display: flex;
   justify-content: end;
-  padding-inline: 70%;
+  padding-inline: 57%;
 }
 
 #carrossel, #itens-carregando {
@@ -119,6 +119,7 @@
   background-color: #1E1F24;
   backdrop-filter: blur(10px);
   border: solid 2px black;
+  box-shadow: -2px 2px 0 black;
   height: 500px;
   width: 700px;
   border-radius: 24px;
@@ -235,15 +236,13 @@ a[name=galeria] button:hover {
 }
 
 #habilidades {
-  height: 100vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  padding: 32px 0;
 }
 #habilidades h2 {
   align-self: center;
   color: white;
+  margin: 32px 0;
 }
 #habilidades-container {
   height: 80%;
@@ -251,7 +250,6 @@ a[name=galeria] button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 2px solid #EFEFEF;
 }
 #habilidades-lista {
   display: grid;
@@ -277,19 +275,75 @@ a[name=galeria] button:hover {
 }
 
 #sobre {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cartao {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+  background-color: #242834;
+  border: solid 2px black;
+  border-radius: 16px;
+  padding: 128px 32px;
+  overflow: visible;
+  position: relative;
+}
+#cartao p, #cartao h2 {
+  color: white;
+  padding: 16px;
+}
+
+.foto-container {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+
+#perfil {
+  height: 250px;
+  width: 250px;
+  align-self: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#brasao {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+}
+#brasao img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #contato {
-  height: 100vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  padding: 32px 0;
 }
 #contato h2 {
   align-self: center;
   color: white;
+  margin: 32px 0;
 }
 #contato-container {
   height: 80%;
@@ -305,8 +359,8 @@ a[name=galeria] button:hover {
 }
 #contato button {
   color: white;
-  height: 80px;
-  width: 30vw;
+  height: 60px;
+  width: 445px;
   background-color: rgba(36, 40, 52, 0.75);
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -330,7 +384,7 @@ html, body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: transparent;
   width: 100%;
-  height: 400vh;
+  height: 300vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -350,17 +404,33 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 400vh;
+  height: 300vh;
   background: linear-gradient(180deg, #7D53FF 0%, #7D53FF 10%, #7D53FF 65%, #7D53FF 100%);
   clip-path: polygon(100% 0%, 50% 0%, 75% 12.5%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 75% 37.5%, 100% 25%);
   z-index: -1;
 }
 
-.coluna-dupla {
+#colunas {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+#colunas-esquerda {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#colunas-direita {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
