@@ -22,18 +22,32 @@
         gap: 12px;
     }
     button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px 0 16px;
         color: white;
         height: 60px;
         width: 445px;
-        background-color: rgba(v.$dark-color, 0.75);
-        backdrop-filter: blur(10px);
         border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: solid 2px black;
+        box-shadow: -4px 4px 0 0 black;
         &:hover{
             cursor: pointer;
+        }
+        &[name="github"]{
+            background-color: v.$dark-color;
+        }
+        &[name="linkedin"]{
+            background-color: #007EBB;
+        }
+        &[name="gmail"]{
+            background-color: #F0EFEF;
+            color: black;
+        }
+        img{
+            height: 48px;
+            width: 48px;
         }
     }
 }

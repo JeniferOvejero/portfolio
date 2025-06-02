@@ -358,19 +358,33 @@ a[name=galeria] button:hover {
   gap: 12px;
 }
 #contato button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px 0 16px;
   color: white;
   height: 60px;
   width: 445px;
-  background-color: rgba(36, 40, 52, 0.75);
-  backdrop-filter: blur(10px);
   border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: solid 2px black;
+  box-shadow: -4px 4px 0 0 black;
 }
 #contato button:hover {
   cursor: pointer;
+}
+#contato button[name=github] {
+  background-color: #242834;
+}
+#contato button[name=linkedin] {
+  background-color: #007EBB;
+}
+#contato button[name=gmail] {
+  background-color: #F0EFEF;
+  color: black;
+}
+#contato button img {
+  height: 48px;
+  width: 48px;
 }
 
 * {
