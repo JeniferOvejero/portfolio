@@ -7,8 +7,8 @@
     <title>Portifólio</title>
 </head>
 <body>
+    <div id="fundo"></div>
     <div id="container">
-        <div id="fundo"></div>
         <section id="home">
             <div id="home-esquerda">
                 <div id="apresentacao">
@@ -17,7 +17,6 @@
                 </div>
                 <div id="botoes">
                     <button name="conheca-projetos">Conheça meu trabalho</button>
-                    <button name="contato">Contato</button>    
                 </div>
                 
             </div>
@@ -37,7 +36,6 @@
         <section id="projetos">
             <h2>PROJETOS</h2>
             <div id="carrossel">
-                <button class="btn-navegacao esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
                 <div class="slides" id="carrossel-slides">
                     <div id="itens-carregando">
                         <div class="item-carregando"></div>
@@ -45,9 +43,12 @@
                         <div class="item-carregando"></div>
                     </div>
                 </div>
+            </div>
+            <div class="botoes-projetos">
+                <button class="btn-navegacao esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
+                <a href="https://github.com/JeniferOvejero?tab=repositories" name="galeria"><button name="galeria">Ver mais</button></a>
                 <button class="btn-navegacao direita" onclick="moverCarrossel(1)">&#10095;</button>
             </div>
-            <a href="https://github.com/JeniferOvejero?tab=repositories" name="galeria"><button name="galeria">Ver mais</button></a>
         </section>
         <div id="colunas">
             <div id="colunas-esquerda">

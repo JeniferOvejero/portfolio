@@ -11,25 +11,30 @@
 #home-esquerda{
     margin: 25vh 0;
     #apresentacao{
-        margin: 0 0 0 5vw;
-        width: 500px;
+        margin: 0 0 0 122px;
+        width: 550px;
         p, h1{
             margin: 0;
         }
+        h1{
+            font-size: 48px;
+        }
         p{
-            font-size: 24px;
+            font-size: 32px;
         }
     }
     #botoes{
-        margin: 8px 0 0 5vw;
+        
+        margin: 8px 0 0 122px;
         button{
+            font-size: 32px;
             padding: 8px;
             margin: 0 8px 0 0;
             height: 32px;
             border-radius: 8px;
             font-weight: 600;
             &[name="conheca-projetos"]{
-                border: 2px solid v.$dark-purple-color;
+                border: 2px solid #3e0e86;
                 background-color: v.$primary-color;
                 box-shadow: -2px 2px 0 #3e0e86;
                 color: white;
@@ -62,7 +67,6 @@
         padding: 0;
         display: flex;
         justify-content: end;
-        padding-inline-end: 210px;
         li {
             margin: 8px 0 0 16px;
             list-style: none;
@@ -80,9 +84,10 @@
 #avatar{
     position: absolute;
     bottom: 50%;
-    left: 50%;
+    left: 65%;
     transform: translate(-50%, 50%);
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 600px;
     z-index: 10;
+    border-radius: 50%;
 }
