@@ -116,7 +116,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1E1F24;
+  background-color: #26272e;
   backdrop-filter: blur(10px);
   border: solid 2px black;
   box-shadow: -2px 2px 0 black;
@@ -202,6 +202,7 @@
   color: white;
   font-size: 2rem;
   border: none;
+  border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
   z-index: 10;
