@@ -7,8 +7,8 @@
     <title>Portifólio</title>
 </head>
 <body>
+    <div id="fundo"></div>
     <div id="container">
-        <div id="fundo"></div>
         <section id="home">
             <div id="home-esquerda">
                 <div id="apresentacao">
@@ -16,9 +16,11 @@
                     <h1>Desenvolvedora Web e <br> Designer UI/UX</h1>
                 </div>
                 <div id="botoes">
-                    <button name="conheca-projetos">Conheça meu trabalho</button>
-                    <button name="contato">Contato</button>    
+                    <a id="github-home" href="#"><img src="assets/icon-github-dark.svg" alt="github"></a>
+                    <a id="linkedin-home" href="#"><img src="assets/icon-linkedin.svg" alt="linkedin"></a>
+                    <a id="gmail-home" href="#"><img src="assets/icon-gmail.svg" alt="gmail"></a>
                 </div>
+                <button name="conheca-projetos">Conheça meu trabalho</button>
                 
             </div>
             <div id="home-direita">
@@ -37,7 +39,6 @@
         <section id="projetos">
             <h2>PROJETOS</h2>
             <div id="carrossel">
-                <button class="btn-navegacao esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
                 <div class="slides" id="carrossel-slides">
                     <div id="itens-carregando">
                         <div class="item-carregando"></div>
@@ -45,9 +46,12 @@
                         <div class="item-carregando"></div>
                     </div>
                 </div>
+            </div>
+            <div class="botoes-projetos">
+                <button class="btn-navegacao esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
+                <a href="https://github.com/JeniferOvejero?tab=repositories" name="galeria"><button name="galeria">Ver mais</button></a>
                 <button class="btn-navegacao direita" onclick="moverCarrossel(1)">&#10095;</button>
             </div>
-            <a href="https://github.com/JeniferOvejero?tab=repositories" name="galeria"><button name="galeria">Ver mais</button></a>
         </section>
         <div id="colunas">
             <div id="colunas-esquerda">

@@ -10,44 +10,70 @@
   margin: 25vh 0;
 }
 #home-esquerda #apresentacao {
-  margin: 0 0 0 5vw;
-  width: 500px;
+  margin: 0 0 0 122px;
+  width: 550px;
 }
 #home-esquerda #apresentacao p, #home-esquerda #apresentacao h1 {
   margin: 0;
 }
+#home-esquerda #apresentacao h1 {
+  font-size: 48px;
+}
 #home-esquerda #apresentacao p {
-  font-size: 24px;
+  font-size: 32px;
 }
 #home-esquerda #botoes {
-  margin: 8px 0 0 5vw;
+  display: flex;
+  margin: 32px 0 32px 122px;
 }
-#home-esquerda #botoes button {
-  padding: 8px;
+#home-esquerda #botoes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 24px 0 0;
+  border: 1px solid black;
+  border-radius: 16px;
+  height: 50px;
+  width: 50px;
+  box-shadow: -4px 4px black;
+}
+#home-esquerda #botoes a#github-home {
+  background-color: #2A2A2A;
+}
+#home-esquerda #botoes a#github-home img {
+  height: 30px;
+  width: 30px;
+}
+#home-esquerda #botoes a#linkedin-home {
+  background-color: #0288D1;
+}
+#home-esquerda #botoes a#linkedin-home img {
+  height: 46px;
+  width: 46px;
+}
+#home-esquerda #botoes a#gmail-home {
+  background-color: #F0EFEF;
+}
+#home-esquerda #botoes a#gmail-home img {
+  height: 38px;
+  width: 38px;
+}
+#home-esquerda button {
+  font-size: 28px;
+  padding: 10px 16px;
   margin: 0 8px 0 0;
-  height: 32px;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 16px;
+  font-weight: 700;
 }
-#home-esquerda #botoes button[name=conheca-projetos] {
-  border: 2px solid #7D53FF;
+#home-esquerda button[name=conheca-projetos] {
+  margin: 8px 0 0 122px;
+  border: 2px solid #3e0e86;
   background-color: #7D53FF;
   box-shadow: -2px 2px 0 #3e0e86;
   color: white;
 }
-#home-esquerda #botoes button[name=conheca-projetos]:hover {
+#home-esquerda button[name=conheca-projetos]:hover {
   background-color: #3e0e86;
-  cursor: pointer;
-}
-#home-esquerda #botoes button[name=contato] {
-  border: 2px solid #242834;
-  background-color: transparent;
-  box-shadow: -2px 2px 0 #242834;
-  color: #242834;
-}
-#home-esquerda #botoes button[name=contato]:hover {
-  background-color: #242834;
-  color: white;
   cursor: pointer;
 }
 
@@ -56,45 +82,48 @@
   width: 100%;
 }
 #home-direita nav ul {
-  margin: 0;
+  margin: 42px 0 0 0;
   padding: 0;
   display: flex;
   justify-content: end;
-  padding-inline-end: 210px;
+  font-weight: 700;
 }
 #home-direita nav ul li {
-  margin: 8px 0 0 16px;
+  margin: 8px 0 0 24px;
   list-style: none;
 }
 #home-direita nav ul li a {
   text-decoration: none;
   color: #EFEFEF;
 }
-#home-direita nav ul li a:hover {
+#home-direita nav ul li a:hover, #home-direita nav ul li a[href="#home"] {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
 }
 
 #avatar {
   position: absolute;
   bottom: 50%;
-  left: 50%;
+  left: 65%;
   transform: translate(-50%, 50%);
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 600px;
   z-index: 10;
+  border-radius: 50%;
 }
 
 #projetos {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 #projetos h2 {
   color: white;
   display: flex;
   justify-content: end;
-  padding-inline: 57%;
+  padding-inline: 70%;
 }
 
 #carrossel, #itens-carregando {
@@ -108,10 +137,8 @@
   display: flex;
   gap: 48px;
   transition: transform 0.4s ease;
-  padding-inline: 48px;
 }
 #carrossel .carrossel-item, #itens-carregando .carrossel-item {
-  position: relative;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -133,8 +160,6 @@
 #carrossel .carrossel-item .item, #itens-carregando .carrossel-item .item {
   height: 100%;
   width: 100%;
-  left: 50%;
-  top: 0%;
   display: flex;
   flex-direction: column;
 }
@@ -194,24 +219,21 @@
   animation-delay: 1s;
   opacity: 0.7;
 }
-#carrossel .btn-navegacao, #itens-carregando .btn-navegacao {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+
+.btn-navegacao {
+  height: 50px;
+  width: 120px;
+  background: rgba(36, 40, 52, 0.75);
   color: white;
   font-size: 2rem;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
+  border: 2px solid black;
+  border-radius: 5px;
   cursor: pointer;
-  z-index: 10;
 }
-#carrossel .btn-navegacao.esquerda, #itens-carregando .btn-navegacao.esquerda {
-  left: 0;
-}
-#carrossel .btn-navegacao.direita, #itens-carregando .btn-navegacao.direita {
-  right: 0;
+
+.botoes-projetos {
+  display: flex;
+  justify-content: space-between;
 }
 
 a[name=galeria] {
@@ -223,7 +245,8 @@ a[name=galeria] button {
   height: 32px;
   border-radius: 8px;
   font-weight: 600;
-  width: 100px;
+  height: 50px;
+  width: 120px;
   padding: 8px;
   border: 2px solid #242834;
   background-color: white;
@@ -410,8 +433,7 @@ h1 {
 }
 
 #container {
-  position: relative;
-  height: 100%;
+  margin-inline: 120px;
 }
 
 #fundo {
@@ -420,8 +442,8 @@ h1 {
   left: 0;
   width: 100%;
   height: 300vh;
-  background: linear-gradient(180deg, #7D53FF 0%, #7D53FF 10%, #7D53FF 65%, #7D53FF 100%);
-  clip-path: polygon(100% 0%, 50% 0%, 75% 12.5%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 75% 37.5%, 100% 25%);
+  background: linear-gradient(180deg, #4637c9 0%, #7D53FF 33%, #7D53FF 66%, #4637c9 100%);
+  clip-path: polygon(100% 0%, 50% 0%, 75% 16.6%, 0% 66.6%, 0% 100%, 100% 100%, 100% 66.6%, 75% 50%, 100% 33.3%);
   z-index: -1;
 }
 

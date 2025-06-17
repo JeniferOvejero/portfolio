@@ -4,12 +4,12 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     h2{
         color: white;
         display: flex;
         justify-content: end;
-        padding-inline: 57%;
+        padding-inline: 70%;
     }
 }
 #carrossel,  #itens-carregando{
@@ -23,11 +23,9 @@
     display: flex;
     gap: 48px;
     transition: transform 0.4s ease;
-    padding-inline: 48px;
   }
 
   .carrossel-item {
-    position: relative;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -48,8 +46,6 @@
     .item{
       height: 100%;
       width: 100%;
-      left: 50%;
-      top: 0%;
       display: flex;
       flex-direction: column;
       &-imagem{
@@ -105,28 +101,21 @@
       opacity: 1 - ($i - 1) * 0.15;
     }
   }
+}
 
-  .btn-navegacao {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 12px;
-    cursor: pointer;
-    z-index: 10;
-
-    &.esquerda {
-      left: 0;
-    }
-
-    &.direita {
-      right: 0;
-    }
-  }
+.btn-navegacao {
+  height: 50px;
+  width: 120px;
+  background: rgba(v.$dark-color, 0.75);
+  color: white;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.botoes-projetos{
+ display: flex;
+ justify-content: space-between;
 }
 
 a[name='galeria']{
@@ -138,7 +127,8 @@ a[name='galeria']{
     height: 32px;
     border-radius: 8px;
     font-weight: 600;
-    width: 100px;
+    height: 50px;
+    width: 120px;
     padding: 8px;
     border: 2px solid v.$dark-color;
     background-color: white;

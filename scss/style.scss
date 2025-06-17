@@ -25,9 +25,8 @@ html, body{
 h1{
     font-size: 40px;
 }
-#container{    
-    position: relative;
-    height: 100%;
+#container{
+    margin-inline: 120px;
 }
 #fundo {
     position: absolute;
@@ -38,20 +37,20 @@ h1{
     background: linear-gradient(
                                 180deg,
                                 v.$dark-purple-color 0%,
-                                v.$primary-color 10%,
-                                v.$primary-color 65%,
+                                v.$primary-color 33%,
+                                v.$primary-color 66%,
                                 v.$dark-purple-color 100%
                                 );
     clip-path: polygon(
         100% 0%,
         50% 0%,
-        75% 12.5%,
-        0% 50%,
+        75% 16.6%,
+        0% 66.6%,
         0% 100%,
         100% 100%,
-        100% 50%,
-        75% 37.5%,
-        100% 25%
+        100% 66.6%,
+        75% 50%,
+        100% 33.3%
     );
     z-index: -1;
 }
