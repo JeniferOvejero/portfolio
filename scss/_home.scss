@@ -84,7 +84,8 @@
 #home-direita{
     height: 100%;
     width: 100%;
-    nav ul{
+    nav{
+        ul{
         margin: 42px 0 0 0;
         padding: 0;
         display: flex;
@@ -96,10 +97,11 @@
             a{
                 text-decoration: none;
                 color: v.$light-color;
-                &:hover{
+                &:hover, &[href="#home"]{
                     text-decoration: underline;
                     text-decoration-thickness: 2px;
                     text-underline-offset: 8px;
+                    }
                 }
             }
         }

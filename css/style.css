@@ -96,7 +96,7 @@
   text-decoration: none;
   color: #EFEFEF;
 }
-#home-direita nav ul li a:hover {
+#home-direita nav ul li a:hover, #home-direita nav ul li a[href="#home"] {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
