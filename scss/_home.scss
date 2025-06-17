@@ -24,16 +24,20 @@
         }
     }
     #botoes{
-        
         margin: 8px 0 0 122px;
-        button{
-            font-size: 32px;
+        a{
+            margin: 0 8px 0 0;
+        }
+        
+    }
+    button{
+            font-size: 20px;
             padding: 8px;
             margin: 0 8px 0 0;
-            height: 32px;
             border-radius: 8px;
             font-weight: 600;
             &[name="conheca-projetos"]{
+                margin: 8px 0 0 122px;
                 border: 2px solid #3e0e86;
                 background-color: v.$primary-color;
                 box-shadow: -2px 2px 0 #3e0e86;
@@ -41,22 +45,10 @@
                 &:hover{
                 background-color: #3e0e86;
                 cursor: pointer;
-            }
-            }
-            &[name="contato"]{
-                border: 2px solid v.$dark-color;
-                background-color: transparent;
-                box-shadow: -2px 2px 0 v.$dark-color;
-                color: v.$dark-color;
-                &:hover{
-                background-color: v.$dark-color;
-                color: white;
-                cursor: pointer;
-            }
+                }
             }
             
         }
-    }
 }
 
 #home-direita{

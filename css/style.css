@@ -25,33 +25,25 @@
 #home-esquerda #botoes {
   margin: 8px 0 0 122px;
 }
-#home-esquerda #botoes button {
-  font-size: 32px;
+#home-esquerda #botoes a {
+  margin: 0 8px 0 0;
+}
+#home-esquerda button {
+  font-size: 20px;
   padding: 8px;
   margin: 0 8px 0 0;
-  height: 32px;
   border-radius: 8px;
   font-weight: 600;
 }
-#home-esquerda #botoes button[name=conheca-projetos] {
+#home-esquerda button[name=conheca-projetos] {
+  margin: 8px 0 0 122px;
   border: 2px solid #3e0e86;
   background-color: #7D53FF;
   box-shadow: -2px 2px 0 #3e0e86;
   color: white;
 }
-#home-esquerda #botoes button[name=conheca-projetos]:hover {
+#home-esquerda button[name=conheca-projetos]:hover {
   background-color: #3e0e86;
-  cursor: pointer;
-}
-#home-esquerda #botoes button[name=contato] {
-  border: 2px solid #242834;
-  background-color: transparent;
-  box-shadow: -2px 2px 0 #242834;
-  color: #242834;
-}
-#home-esquerda #botoes button[name=contato]:hover {
-  background-color: #242834;
-  color: white;
   cursor: pointer;
 }
 
