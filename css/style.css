@@ -23,17 +23,47 @@
   font-size: 32px;
 }
 #home-esquerda #botoes {
-  margin: 8px 0 0 122px;
+  display: flex;
+  margin: 32px 0 32px 122px;
 }
 #home-esquerda #botoes a {
-  margin: 0 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 24px 0 0;
+  border: 1px solid black;
+  border-radius: 16px;
+  height: 50px;
+  width: 50px;
+  box-shadow: -4px 4px black;
+}
+#home-esquerda #botoes a#github-home {
+  background-color: #2A2A2A;
+}
+#home-esquerda #botoes a#github-home img {
+  height: 30px;
+  width: 30px;
+}
+#home-esquerda #botoes a#linkedin-home {
+  background-color: #0288D1;
+}
+#home-esquerda #botoes a#linkedin-home img {
+  height: 46px;
+  width: 46px;
+}
+#home-esquerda #botoes a#gmail-home {
+  background-color: #F0EFEF;
+}
+#home-esquerda #botoes a#gmail-home img {
+  height: 38px;
+  width: 38px;
 }
 #home-esquerda button {
-  font-size: 20px;
-  padding: 8px;
+  font-size: 28px;
+  padding: 10px 16px;
   margin: 0 8px 0 0;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 16px;
+  font-weight: 700;
 }
 #home-esquerda button[name=conheca-projetos] {
   margin: 8px 0 0 122px;
@@ -52,13 +82,14 @@
   width: 100%;
 }
 #home-direita nav ul {
-  margin: 0;
+  margin: 42px 0 0 0;
   padding: 0;
   display: flex;
   justify-content: end;
+  font-weight: 700;
 }
 #home-direita nav ul li {
-  margin: 8px 0 0 16px;
+  margin: 8px 0 0 24px;
   list-style: none;
 }
 #home-direita nav ul li a {
@@ -67,6 +98,8 @@
 }
 #home-direita nav ul li a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
 }
 
 #avatar {
