@@ -5,110 +5,108 @@
   height: 100vh;
   overflow: hidden;
 }
-
-#home-esquerda {
+#home #home-esquerda {
   margin: 25vh 0;
 }
-#home-esquerda #apresentacao {
-  margin: 0 0 0 122px;
+#home #home-esquerda #apresentacao {
+  margin-left: 122px;
   width: 550px;
 }
-#home-esquerda #apresentacao p, #home-esquerda #apresentacao h1 {
+#home #home-esquerda #apresentacao h1 {
   margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
-#home-esquerda #apresentacao h1 {
-  font-size: 48px;
+#home #home-esquerda #apresentacao p {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
-#home-esquerda #apresentacao p {
-  font-size: 32px;
-}
-#home-esquerda #botoes {
+#home #home-esquerda #botoes {
   display: flex;
   margin: 32px 0 32px 122px;
 }
-#home-esquerda #botoes a {
+#home #home-esquerda #botoes a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 24px 0 0;
+  margin-right: 24px;
   border: 1px solid black;
   border-radius: 16px;
   height: 50px;
   width: 50px;
   box-shadow: -4px 4px black;
 }
-#home-esquerda #botoes a#github-home {
+#home #home-esquerda #botoes a#github-home {
   background-color: #2A2A2A;
 }
-#home-esquerda #botoes a#github-home img {
+#home #home-esquerda #botoes a#github-home img {
   height: 30px;
   width: 30px;
 }
-#home-esquerda #botoes a#linkedin-home {
+#home #home-esquerda #botoes a#linkedin-home {
   background-color: #0288D1;
 }
-#home-esquerda #botoes a#linkedin-home img {
+#home #home-esquerda #botoes a#linkedin-home img {
   height: 46px;
   width: 46px;
 }
-#home-esquerda #botoes a#gmail-home {
+#home #home-esquerda #botoes a#gmail-home {
   background-color: #F0EFEF;
 }
-#home-esquerda #botoes a#gmail-home img {
+#home #home-esquerda #botoes a#gmail-home img {
   height: 38px;
   width: 38px;
 }
-#home-esquerda button {
-  font-size: 28px;
+#home #home-esquerda button {
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
   padding: 10px 16px;
-  margin: 0 8px 0 0;
+  margin-right: 8px;
   border-radius: 16px;
   font-weight: 700;
 }
-#home-esquerda button[name=conheca-projetos] {
+#home #home-esquerda button[name=conheca-projetos] {
   margin: 8px 0 0 122px;
   border: 2px solid #3e0e86;
   background-color: #7D53FF;
-  box-shadow: -2px 2px 0 #3e0e86;
   color: white;
+  box-shadow: -2px 2px 0 #3e0e86;
 }
-#home-esquerda button[name=conheca-projetos]:hover {
+#home #home-esquerda button[name=conheca-projetos]:hover {
   background-color: #3e0e86;
   cursor: pointer;
 }
-
-#home-direita {
+#home #home-direita {
   height: 100%;
   width: 100%;
 }
-#home-direita nav ul {
-  margin: 42px 0 0 0;
+#home #home-direita nav ul {
+  margin: 42px 0 0;
   padding: 0;
   display: flex;
   justify-content: end;
   font-weight: 700;
 }
-#home-direita nav ul li {
-  margin: 8px 0 0 24px;
+#home #home-direita nav ul li {
   list-style: none;
+  margin-left: 24px;
+  margin-top: 8px;
 }
-#home-direita nav ul li a {
-  text-decoration: none;
+#home #home-direita nav ul li a {
   color: #EFEFEF;
+  text-decoration: none;
+  font-size: clamp(0.875rem, 1vw, 1rem);
 }
-#home-direita nav ul li a:hover, #home-direita nav ul li a[href="#home"] {
+#home #home-direita nav ul li a:hover, #home #home-direita nav ul li a[href="#home"] {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
 }
-
-#avatar {
+#home #avatar {
   position: absolute;
   bottom: 50%;
   left: 65%;
   transform: translate(-50%, 50%);
-  height: 600px;
-  width: 600px;
+  height: clamp(250px, 30vw, 600px);
+  width: clamp(250px, 30vw, 600px);
   z-index: 10;
   border-radius: 50%;
 }
@@ -120,10 +118,11 @@
   justify-content: space-evenly;
 }
 #projetos h2 {
-  color: white;
+  color: #EFEFEF;
   display: flex;
   justify-content: end;
   padding-inline: 70%;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 #carrossel, #itens-carregando {
@@ -143,12 +142,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #26272e;
+  background-color: #242834;
   backdrop-filter: blur(10px);
   border: solid 2px black;
   box-shadow: -2px 2px 0 black;
-  height: 500px;
-  width: 700px;
+  height: clamp(350px, 60vh, 500px);
+  width: clamp(500px, 40vw, 700px);
   border-radius: 24px;
 }
 #carrossel .carrossel-item:hover, #itens-carregando .carrossel-item:hover {
@@ -166,35 +165,35 @@
 #carrossel .carrossel-item .item-imagem, #itens-carregando .carrossel-item .item-imagem {
   align-self: center;
   background-color: white;
-  height: 350px;
-  width: 670px;
+  height: clamp(200px, 40vh, 350px);
+  width: 90%;
   border-radius: 12px;
   margin: 12px;
 }
 #carrossel .carrossel-item .item-titulo, #itens-carregando .carrossel-item .item-titulo {
   margin: 0 24px;
-  color: white;
+  color: #EFEFEF;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 #carrossel .carrossel-item .item-tecnologias, #itens-carregando .carrossel-item .item-tecnologias {
   margin: 12px;
   display: flex;
   align-items: center;
-  color: white;
+  color: #EFEFEF;
 }
 #carrossel .carrossel-item .item-tecnologias .imagem-tecnologia, #itens-carregando .carrossel-item .item-tecnologias .imagem-tecnologia {
   height: 50px;
   width: 50px;
   background-color: white;
-  color: white;
   margin: 12px;
-  border-radius: 100%;
+  border-radius: 50%;
   object-fit: contain;
   padding: 5px;
   box-sizing: border-box;
 }
 #carrossel .item-carregando, #itens-carregando .item-carregando {
-  height: 500px;
-  width: 700px;
+  height: clamp(350px, 60vh, 500px);
+  width: clamp(500px, 40vw, 700px);
   background-color: #242834;
   border-radius: 24px;
   animation: pulse 2s ease-in-out infinite;
@@ -224,8 +223,8 @@
   height: 50px;
   width: 120px;
   background: rgba(36, 40, 52, 0.75);
-  color: white;
-  font-size: 2rem;
+  color: #EFEFEF;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
@@ -242,12 +241,12 @@ a[name=galeria] {
 a[name=galeria] button {
   align-self: center;
   margin: 0 8px 0 0;
-  height: 32px;
-  border-radius: 8px;
-  font-weight: 600;
   height: 50px;
   width: 120px;
   padding: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
   border: 2px solid #242834;
   background-color: white;
   box-shadow: -2px 2px 0 #242834;

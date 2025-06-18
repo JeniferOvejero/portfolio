@@ -10,3 +10,14 @@ $gmail-gray: #F0EFEF;
 
 $altura-max: 300vh;
 
+$font-xs: clamp(0.75rem, 1vw, 0.875rem); // ~12-14px
+$font-sm: clamp(0.875rem, 1vw, 1rem);  // ~14-16px
+$font-md: clamp(1rem, 1.3vw, 1.125rem);  // ~16-18px
+$font-lg: clamp(1.25rem, 2vw, 1.5rem);   // ~20-24px
+$font-xl: clamp(1.75rem, 3vw, 2.5rem);   // ~28-40px
+$font-xxl: clamp(2.5rem, 4vw, 3.5rem);   // ~40-56px
+
+$avatar-size: clamp(250px, 30vw, 600px);
+
+$item-carrossel-h: clamp(350px, 60vh, 500px);
+$item-carrossel-w: clamp(500px, 40vw, 700px);

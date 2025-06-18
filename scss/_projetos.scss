@@ -1,18 +1,21 @@
 @use 'variaveis' as v;
 
-#projetos{
-    height: 100vh;
+#projetos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  h2 {
+    color: v.$light-color;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    h2{
-        color: white;
-        display: flex;
-        justify-content: end;
-        padding-inline: 70%;
-    }
+    justify-content: end;
+    padding-inline: 70%;
+    font-size: v.$font-xl;
+  }
 }
-#carrossel,  #itens-carregando{
+
+#carrossel, #itens-carregando {
   position: relative;
   overflow: visible;
   scroll-behavior: smooth;
@@ -30,48 +33,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #26272e;
+    background-color: v.$dark-color;
     backdrop-filter: blur(10px);
     border: solid 2px black;
     box-shadow: -2px 2px 0 black;
-    height: 500px;
-    width: 700px;
+    height: v.$item-carrossel-h;
+    width: v.$item-carrossel-w;
     border-radius: 24px;
-    &:hover{
+
+    &:hover {
       transform: scale(1.03);
       transform-origin: center center;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
-    .item{
+
+    .item {
       height: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
-      &-imagem{
+
+      &-imagem {
         align-self: center;
         background-color: white;
-        height: 350px;
-        width: 670px;
+        height: clamp(200px, 40vh, 350px);
+        width: 90%;
         border-radius: 12px;
         margin: 12px;
       }
-      &-titulo{
+
+      &-titulo {
         margin: 0 24px;
-        color: white;
+        color: v.$light-color;
+        font-size: v.$font-lg;
       }
-      &-tecnologias{
+
+      &-tecnologias {
         margin: 12px;
         display: flex;
         align-items: center;
-        color: white;
-        .imagem-tecnologia{
+        color: v.$light-color;
+
+        .imagem-tecnologia {
           height: 50px;
           width: 50px;
           background-color: white;
-          color: white;
           margin: 12px;
-          border-radius: 100%;
+          border-radius: 50%;
           object-fit: contain;
           padding: 5px;
           box-sizing: border-box;
@@ -79,22 +88,24 @@
       }
     }
   }
-  
+
   .item-carregando {
-    height: 500px;
-    width: 700px;
+    height: v.$item-carrossel-h;
+    width: v.$item-carrossel-w;
     background-color: v.$dark-color;
     border-radius: 24px;
     animation: pulse 2s ease-in-out infinite;
   }
+
   @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
   }
-  50% {
-    opacity: 0.4;
-  }
-}
+
   @for $i from 1 through 3 {
     .item-carregando:nth-child(#{$i}) {
       animation-delay: ($i - 1) * 0.5s;
@@ -107,37 +118,39 @@
   height: 50px;
   width: 120px;
   background: rgba(v.$dark-color, 0.75);
-  color: white;
-  font-size: 2rem;
+  color: v.$light-color;
+  font-size: v.$font-lg;
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
 }
-.botoes-projetos{
- display: flex;
- justify-content: space-between;
+
+.botoes-projetos {
+  display: flex;
+  justify-content: space-between;
 }
 
-a[name='galeria']{
-    align-self: center;
+a[name='galeria'] {
+  align-self: center;
 
-    button{
+  button {
     align-self: center;
     margin: 0 8px 0 0;
-    height: 32px;
-    border-radius: 8px;
-    font-weight: 600;
     height: 50px;
     width: 120px;
     padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: v.$font-md;
     border: 2px solid v.$dark-color;
     background-color: white;
     box-shadow: -2px 2px 0 v.$dark-color;
     color: v.$dark-color;
-    &:hover{
-        background-color: v.$dark-color;
-        color: white;
-        cursor: pointer;
-        }
+
+    &:hover {
+      background-color: v.$dark-color;
+      color: white;
+      cursor: pointer;
     }
+  }
 }
