@@ -11,8 +11,12 @@ const itemLargura = 700 + 48;
   javascript: "https://profilinator.rishav.dev/skills-assets/javascript-original.svg",
   nodejs: "https://img.icons8.com/fluent/512/node-js.png",
   react: "https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg",
+  express: "https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg",
+  mongodb: "https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg",
+  wordpress: "https://profilinator.rishav.dev/skills-assets/wordpress.png",
   python: "https://profilinator.rishav.dev/skills-assets/python-original.svg",
-  c: "https://profilinator.rishav.dev/skills-assets/c-original.svg"
+  c: "https://profilinator.rishav.dev/skills-assets/c-original.svg",
+  gnubash: "https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg"
 };
 
 let index = 0;

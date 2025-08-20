@@ -1,116 +1,227 @@
-#home {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 100vh;
-  overflow: hidden;
+@media (min-width: 993px) {
+  #home {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #home #home-esquerda {
+    margin: 25vh 0;
+  }
+  #home #home-esquerda #apresentacao {
+    margin-left: 122px;
+    width: 550px;
+  }
+  #home #home-esquerda #apresentacao h1 {
+    margin: 0;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+  }
+  #home #home-esquerda #apresentacao p {
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+  }
+  #home #home-esquerda #botoes {
+    display: flex;
+    margin: 32px 0 32px 122px;
+  }
+  #home #home-esquerda #botoes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    border: 1px solid black;
+    border-radius: 16px;
+    height: 50px;
+    width: 50px;
+    box-shadow: -4px 4px black;
+  }
+  #home #home-esquerda #botoes a#github-home {
+    background-color: #2A2A2A;
+  }
+  #home #home-esquerda #botoes a#github-home img {
+    height: 30px;
+    width: 30px;
+  }
+  #home #home-esquerda #botoes a#linkedin-home {
+    background-color: #0288D1;
+  }
+  #home #home-esquerda #botoes a#linkedin-home img {
+    height: 46px;
+    width: 46px;
+  }
+  #home #home-esquerda #botoes a#gmail-home {
+    background-color: #F0EFEF;
+  }
+  #home #home-esquerda #botoes a#gmail-home img {
+    height: 38px;
+    width: 38px;
+  }
+  #home #home-esquerda button {
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    padding: 10px 16px;
+    margin-right: 8px;
+    border-radius: 16px;
+    font-weight: 700;
+  }
+  #home #home-esquerda button[name=conheca-projetos] {
+    margin: 8px 0 0 122px;
+    border: 2px solid #3e0e86;
+    background-color: #7D53FF;
+    color: white;
+    box-shadow: -2px 2px 0 #3e0e86;
+  }
+  #home #home-esquerda button[name=conheca-projetos]:hover {
+    background-color: #3e0e86;
+    cursor: pointer;
+  }
+  #home #home-direita {
+    height: 100%;
+    width: 100%;
+  }
+  #home #home-direita nav ul {
+    margin: 42px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    font-weight: 700;
+  }
+  #home #home-direita nav ul li {
+    list-style: none;
+    margin-left: 24px;
+    margin-top: 8px;
+  }
+  #home #home-direita nav ul li a {
+    color: #EFEFEF;
+    text-decoration: none;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+  }
+  #home #home-direita nav ul li a:hover, #home #home-direita nav ul li a[href="#home"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+  }
+  #home #avatar {
+    position: absolute;
+    bottom: 50%;
+    left: 65%;
+    transform: translate(-50%, 50%);
+    height: clamp(250px, 30vw, 600px);
+    width: clamp(250px, 30vw, 600px);
+    z-index: 10;
+    border-radius: 50%;
+  }
 }
-#home #home-esquerda {
-  margin: 25vh 0;
+@media (max-width: 992px) {
+  #home {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #avatar {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 250px;
+    width: 250px;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  #home-direita {
+    height: 90%;
+  }
+  #home-direita nav ul {
+    margin: 24px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+  #home-direita nav ul li {
+    list-style: none;
+    margin-left: 24px;
+  }
+  #home-direita nav ul li a {
+    color: #EFEFEF;
+    text-decoration: none;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+  }
+  #home-direita nav ul li a:hover, #home-direita nav ul li a[href="#home"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+  }
+  #home-esquerda {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #home-esquerda #apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #home-esquerda #apresentacao h1 {
+    margin-bottom: 28px;
+  }
+  #home-esquerda #botoes {
+    margin-bottom: 48px;
+    display: flex;
+  }
+  #home-esquerda #botoes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 16px;
+    height: 50px;
+    width: 50px;
+    box-shadow: -4px 4px black;
+  }
+  #home-esquerda #botoes a#github-home {
+    background-color: #2A2A2A;
+  }
+  #home-esquerda #botoes a#github-home img {
+    height: 30px;
+    width: 30px;
+  }
+  #home-esquerda #botoes a#linkedin-home {
+    background-color: #0288D1;
+    margin-left: 20px;
+  }
+  #home-esquerda #botoes a#linkedin-home img {
+    height: 46px;
+    width: 46px;
+  }
+  #home-esquerda #botoes a#gmail-home {
+    background-color: #F0EFEF;
+    margin-left: 20px;
+  }
+  #home-esquerda #botoes a#gmail-home img {
+    height: 38px;
+    width: 38px;
+  }
+  button {
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    padding: 10px 16px;
+    margin-right: 8px;
+    border-radius: 16px;
+    font-weight: 700;
+  }
+  button[name=conheca-projetos] {
+    border: 2px solid #3e0e86;
+    background-color: #7D53FF;
+    color: white;
+    box-shadow: -2px 2px 0 #3e0e86;
+  }
+  button[name=conheca-projetos]:hover {
+    background-color: #3e0e86;
+    cursor: pointer;
+  }
 }
-#home #home-esquerda #apresentacao {
-  margin-left: 122px;
-  width: 550px;
-}
-#home #home-esquerda #apresentacao h1 {
-  margin: 0;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-}
-#home #home-esquerda #apresentacao p {
-  margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-}
-#home #home-esquerda #botoes {
-  display: flex;
-  margin: 32px 0 32px 122px;
-}
-#home #home-esquerda #botoes a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 24px;
-  border: 1px solid black;
-  border-radius: 16px;
-  height: 50px;
-  width: 50px;
-  box-shadow: -4px 4px black;
-}
-#home #home-esquerda #botoes a#github-home {
-  background-color: #2A2A2A;
-}
-#home #home-esquerda #botoes a#github-home img {
-  height: 30px;
-  width: 30px;
-}
-#home #home-esquerda #botoes a#linkedin-home {
-  background-color: #0288D1;
-}
-#home #home-esquerda #botoes a#linkedin-home img {
-  height: 46px;
-  width: 46px;
-}
-#home #home-esquerda #botoes a#gmail-home {
-  background-color: #F0EFEF;
-}
-#home #home-esquerda #botoes a#gmail-home img {
-  height: 38px;
-  width: 38px;
-}
-#home #home-esquerda button {
-  font-size: clamp(1rem, 1.3vw, 1.125rem);
-  padding: 10px 16px;
-  margin-right: 8px;
-  border-radius: 16px;
-  font-weight: 700;
-}
-#home #home-esquerda button[name=conheca-projetos] {
-  margin: 8px 0 0 122px;
-  border: 2px solid #3e0e86;
-  background-color: #7D53FF;
-  color: white;
-  box-shadow: -2px 2px 0 #3e0e86;
-}
-#home #home-esquerda button[name=conheca-projetos]:hover {
-  background-color: #3e0e86;
-  cursor: pointer;
-}
-#home #home-direita {
-  height: 100%;
-  width: 100%;
-}
-#home #home-direita nav ul {
-  margin: 42px 0 0;
-  padding: 0;
-  display: flex;
-  justify-content: end;
-  font-weight: 700;
-}
-#home #home-direita nav ul li {
-  list-style: none;
-  margin-left: 24px;
-  margin-top: 8px;
-}
-#home #home-direita nav ul li a {
-  color: #EFEFEF;
-  text-decoration: none;
-  font-size: clamp(0.875rem, 1vw, 1rem);
-}
-#home #home-direita nav ul li a:hover, #home #home-direita nav ul li a[href="#home"] {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
-}
-#home #avatar {
-  position: absolute;
-  bottom: 50%;
-  left: 65%;
-  transform: translate(-50%, 50%);
-  height: clamp(250px, 30vw, 600px);
-  width: clamp(250px, 30vw, 600px);
-  z-index: 10;
-  border-radius: 50%;
-}
-
 #projetos {
   height: 100vh;
   display: flex;
@@ -417,6 +528,7 @@ a[name=galeria] button:hover {
 }
 
 html, body {
+  position: relative;
   background-color: #242834;
   font-size: 16px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -428,46 +540,65 @@ html, body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 40px;
+@media (min-width: 993px) {
+  h1 {
+    font-size: 40px;
+  }
+  #container {
+    margin-inline: 120px;
+  }
+  #fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300vh;
+    background: linear-gradient(180deg, #4637c9 0%, #7D53FF 33%, #7D53FF 66%, #4637c9 100%);
+    clip-path: polygon(100% 0%, 50% 0%, 75% 16.6%, 0% 66.6%, 0% 100%, 100% 100%, 100% 66.6%, 75% 50%, 100% 33.3%);
+    z-index: -1;
+  }
+  #colunas {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  #colunas-esquerda {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #colunas-direita {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
-
-#container {
-  margin-inline: 120px;
-}
-
-#fundo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300vh;
-  background: linear-gradient(180deg, #4637c9 0%, #7D53FF 33%, #7D53FF 66%, #4637c9 100%);
-  clip-path: polygon(100% 0%, 50% 0%, 75% 16.6%, 0% 66.6%, 0% 100%, 100% 100%, 100% 66.6%, 75% 50%, 100% 33.3%);
-  z-index: -1;
-}
-
-#colunas {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-#colunas-esquerda {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-#colunas-direita {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 992px) {
+  #fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    background-color: #7D53FF;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 33%);
+  }
+  #fundo2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: #7D53FF;
+    clip-path: polygon(0% 81%, 50% 100%, 100% 81%, 100% 100%, 0% 100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

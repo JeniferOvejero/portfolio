@@ -11,6 +11,7 @@
 }
 
 html, body{
+    position: relative;
     background-color: v.$dark-color;
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -22,57 +23,91 @@ html, body{
     overflow-x: hidden;
 }
 
-h1{
-    font-size: 40px;
-}
-#container{
-    margin-inline: 120px;
-}
-#fundo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: v.$altura-max;
-    background: linear-gradient(
-                                180deg,
-                                v.$dark-purple-color 0%,
-                                v.$primary-color 33%,
-                                v.$primary-color 66%,
-                                v.$dark-purple-color 100%
-                                );
-    clip-path: polygon(
-        100% 0%,
-        50% 0%,
-        75% 16.6%,
-        0% 66.6%,
-        0% 100%,
-        100% 100%,
-        100% 66.6%,
-        75% 50%,
-        100% 33.3%
-    );
-    z-index: -1;
-}
-#colunas{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    &-esquerda{
-        height: 100%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+@media (min-width: 993px){
+    h1{
+        font-size: 40px;
     }
-    &-direita{
-        height: 100%;
-        width: 50%;
+    #container{
+        margin-inline: 120px;
+    }
+    #fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: v.$altura-max;
+        background: linear-gradient(
+                                    180deg,
+                                    v.$dark-purple-color 0%,
+                                    v.$primary-color 33%,
+                                    v.$primary-color 66%,
+                                    v.$dark-purple-color 100%
+                                    );
+        clip-path: polygon(
+            100% 0%,
+            50% 0%,
+            75% 16.6%,
+            0% 66.6%,
+            0% 100%,
+            100% 100%,
+            100% 66.6%,
+            75% 50%,
+            100% 33.3%
+        );
+        z-index: -1;
+    }
+    #colunas{
+        height: 100vh;
+        width: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        gap: 8px;
+        &-esquerda{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        &-direita{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    #fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 100vh;
+        background-color: v.$primary-color;
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 33%,
+            0% 33%,
+        );
+    }
+    #fundo2{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-color: v.$primary-color;
+        clip-path: polygon(
+            0% 81%,
+            50% 100%,
+            100% 81%,
+            100% 100%,
+            0% 100%
+        );
     }
 }
