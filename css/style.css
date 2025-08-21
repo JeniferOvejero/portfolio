@@ -190,7 +190,7 @@
 }
 
 #carrossel {
-  margin-left: 12px;
+  margin-inline: 12px;
 }
 
 #carrossel, #itens-carregando {
