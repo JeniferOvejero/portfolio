@@ -1,17 +1,16 @@
 @use 'variaveis' as v;
 
 #projetos {
+  background-color: v.$primary-color;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
   h2 {
-    color: v.$light-color;
-    display: flex;
-    justify-content: end;
-    padding-inline: 70%;
-    font-size: v.$font-xl;
+    color: white;
+    font-size: v.$font-lg;
+    align-self: center;
   }
 }
 
@@ -151,6 +150,18 @@ a[name='galeria'] {
       background-color: v.$dark-color;
       color: white;
       cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 993px){
+  #projetos{
+    background: none;
+    h2{
+      display: flex;
+      justify-content: end;
+      padding-inline: 70%;
+      align-self: auto;
     }
   }
 }

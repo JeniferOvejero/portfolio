@@ -1,11 +1,51 @@
 @use 'variaveis' as v;
 
 #habilidades{
-    display: flex;
-    flex-direction: column;
-    & h2{
+  background: linear-gradient(to bottom, v.$primary-color 75%, #ffff 60%);
+  display: flex;
+  flex-direction: column;
+  & h2{
         align-self: center;
         color: white;
+        font-size: v.$font-lg;
+        margin: 32px 0;
+    }
+  &-container{
+      height: 80%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  &-lista {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+  }
+}
+
+.item-habilidade{
+  width: 60px;
+  height: 60px;
+  background-color: rgba(v.$dark-color, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+
+.habilidade{
+  width: 40px;
+  height: 40px;
+}
+
+
+@media (min-width: 993px){
+  #habilidades{
+    background: none;
+    & h2{
         margin: 32px 0;
     }
     &-container{
@@ -19,21 +59,16 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
-}
-}
-.item-habilidade {
-  height: 80px;
-  width: 80px;
-  background-color: rgba(v.$dark-color, 0.75);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 2px black;
-}
+  }
+  }
+  .item-habilidade {
+    height: 80px;
+    width: 80px;
+    
+  }
 
-.habilidade{
-    height: 50px;
-    width: 50px;
+  .habilidade{
+      height: 50px;
+      width: 50px;
+  }
 }

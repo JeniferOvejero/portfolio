@@ -4,51 +4,120 @@
 #contato{
     display: flex;
     flex-direction: column;
-    margin: 0 0 80px 0;
     & h2{
         align-self: center;
-        color: white;
+        color: black;
         margin: 32px 0;
-    }
-    &-container{
-        height: 80%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &-lista{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 12px;
+        font-size: v.$font-lg;
     }
     button{
+        display: none;
+    }
+    &-container{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+}
+    
+    #botoes {
+    display: flex;
+    margin: 32px 0 0 0;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 16px;
+      height: 70px;
+      width: 70px;
+      box-shadow: -4px 4px black;
+      & + a {
+        margin-left: 20px;
+      }
+
+      &#github-home {
+        background-color: v.$github-black;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      &#linkedin-home {
+        background-color: v.$linkedin-blue;
+        img {
+          height: 66px;
+          width: 66px;
+        }
+      }
+
+      &#gmail-home {
+        background-color: v.$gmail-gray;
+        img {
+          height: 58px;
+          width: 58px;
+        }
+      }
+    }
+  }
+@media (min-width: 993px){
+    #contato{
+        background: none;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 32px 0 16px;
-        color: white;
-        height: 60px;
-        width: 445px;
-        border-radius: 12px;
-        border: solid 2px black;
-        box-shadow: -4px 4px 0 0 black;
-        &:hover{
-            cursor: pointer;
+        flex-direction: column;
+        margin: 0 0 80px 0;
+        & h2{
+            align-self: center;
+            color: white;
+            margin: 32px 0;
         }
-        &[name="github"]{
-            background-color: v.$dark-color;
+        &-container{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        &[name="linkedin"]{
-            background-color: #007EBB;
+        &-lista{
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 12px;
         }
-        &[name="gmail"]{
-            background-color: #F0EFEF;
-            color: black;
+        button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32px 0 16px;
+            color: white;
+            height: 60px;
+            width: 445px;
+            border-radius: 12px;
+            border: solid 2px black;
+            box-shadow: -4px 4px 0 0 black;
+            &:hover{
+                cursor: pointer;
+            }
+            &[name="github"]{
+                background-color: v.$dark-color;
+            }
+            &[name="linkedin"]{
+                background-color: #007EBB;
+            }
+            &[name="gmail"]{
+                background-color: #F0EFEF;
+                color: black;
+            }
+            img{
+                height: 48px;
+                width: 48px;
+            }
         }
-        img{
-            height: 48px;
-            width: 48px;
+        #botoes{
+            display: none;
         }
     }
 }

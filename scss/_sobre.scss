@@ -1,7 +1,8 @@
 @use "variaveis" as v;
 
 #sobre{
-    height: 100%;
+    background: linear-gradient(to bottom, v.$primary-color, v.$dark-purple-color );
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,6 +10,7 @@
 }
 
 #cartao{
+    margin: 90px 0 0 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@
     background-color: rgba(v.$dark-color, 1);
     border: solid 2px black;
     border-radius: 16px;
-    padding:  128px 32px;
+    padding:  140px 32px 24px;
     overflow: visible;
     position: relative;
     p, h2{
@@ -61,3 +63,11 @@
     }
 }
 
+@media (min-width: 993px){
+    #sobre{
+        background: none;
+    }
+    #cartao{
+        padding:  140px 32px;
+    }
+}
