@@ -63,14 +63,15 @@
         background-color: white;
         border-radius: 12px;
         margin: 12px;
-        height: 233px; /* NOVO ESTILO MOBILE */
-        width: 280px; /* NOVO ESTILO MOBILE */
+        height: 233px;
+        width: 280px;
+        object-fit: cover;
       }
 
       &-titulo {
         margin: 0 24px;
         color: v.$light-color;
-        font-size: 16px; /* NOVO ESTILO MOBILE */
+        font-size: 16px;
       }
 
       &-tecnologias {
@@ -161,6 +162,9 @@ a[name='galeria']{
 
 
 @media (min-width: 768px) {
+  .item-img{
+    object-fit: fill;
+  }
   a[name='galeria-mobile']{
     display: none;
   }

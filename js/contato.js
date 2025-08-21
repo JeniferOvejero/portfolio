@@ -19,13 +19,14 @@ export function inicializarContato() {
     });
   });
 
-  const gmailLink = document.getElementById("gmail-home");
-  if (gmailLink) {
-    gmailLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      navigator.clipboard.writeText(links.gmail)
+
+    const gmailLinks = document.querySelectorAll(".gmail-home");
+    gmailLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        navigator.clipboard.writeText(links.gmail)
         .then(() => alert("E-mail copiado para a área de transferência!"))
         .catch(() => alert("Erro ao copiar o e-mail."));
     });
-  }
+    });
 }

@@ -235,13 +235,14 @@
   background-color: white;
   border-radius: 12px;
   margin: 12px;
-  height: 233px; /* NOVO ESTILO MOBILE */
-  width: 280px; /* NOVO ESTILO MOBILE */
+  height: 233px;
+  width: 280px;
+  object-fit: cover;
 }
 #carrossel .carrossel-item .item-titulo, #itens-carregando .carrossel-item .item-titulo {
   margin: 0 24px;
   color: #EFEFEF;
-  font-size: 16px; /* NOVO ESTILO MOBILE */
+  font-size: 16px;
 }
 #carrossel .carrossel-item .item-tecnologias, #itens-carregando .carrossel-item .item-tecnologias {
   margin: 12px;
@@ -331,6 +332,9 @@ a[name=galeria] {
 }
 
 @media (min-width: 768px) {
+  .item-img {
+    object-fit: fill;
+  }
   a[name=galeria-mobile] {
     display: none;
   }
@@ -662,7 +666,7 @@ html, body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: transparent;
   width: 100%;
-  height: 300vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
