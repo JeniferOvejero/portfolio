@@ -24,7 +24,6 @@
     position: relative;
     p, h2{
         color: white;
-        padding: 16px;
     }
 }
 
@@ -69,5 +68,8 @@
     }
     #cartao{
         padding:  140px 32px;
+        p, h2{
+            padding: 16px;
+        }
     }
 }

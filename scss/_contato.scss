@@ -20,8 +20,6 @@
             justify-content: center;
             align-items: center;
         }
-}
-    
     #botoes {
     display: flex;
 
@@ -31,8 +29,8 @@
       align-items: center;
       border: 1px solid black;
       border-radius: 16px;
-      height: 70px;
-      width: 70px;
+      height: 60px;
+      width: 60px;
       box-shadow: -4px 4px black;
       & + a {
         margin-left: 20px;
@@ -54,7 +52,7 @@
         }
       }
 
-      &#gmail-home {
+      &.gmail-home {
         background-color: v.$gmail-gray;
         img {
           height: 58px;
@@ -63,6 +61,9 @@
       }
     }
   }
+}
+    
+    
 @media (min-width: 993px){
     #contato{
         background: none;

@@ -1,7 +1,7 @@
 #home {
   position: relative;
   background: linear-gradient(to bottom, #7D53FF 33%, white 33%);
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -15,6 +15,7 @@
   width: clamp(150px, 30vh, 250px);
   z-index: 10;
   border-radius: 50%;
+  border: 2px solid black;
 }
 
 #home-direita {
@@ -48,6 +49,7 @@
 #home-esquerda #botoes {
   display: flex;
   margin: 32px 0 48px 0;
+  z-index: 3;
 }
 #home-esquerda #botoes a {
   display: flex;
@@ -86,6 +88,7 @@
 #home-esquerda #conheca-projetos {
   display: inline-block;
   text-decoration: none;
+  z-index: 3;
   font-size: clamp(1rem, 1.3vw, 1.125rem);
   padding: 10px 16px;
   border-radius: 16px;
@@ -172,24 +175,18 @@
   }
 }
 #projetos {
-  background-color: #7D53FF;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: #7D53FF;
 }
 #projetos h2 {
-  color: white;
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
-  align-self: center;
-}
-
-#itens-carregando {
-  margin-inline: 6px;
-}
-
-#carrossel {
-  margin-inline: 12px;
+  color: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  padding-inline: 0;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
 }
 
 #carrossel, #itens-carregando {
@@ -198,6 +195,7 @@
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
+  margin-left: 12px;
 }
 #carrossel .slides, #carrossel #itens-carregando, #itens-carregando .slides, #itens-carregando #itens-carregando {
   display: flex;
@@ -214,8 +212,8 @@
   border: solid 2px black;
   box-shadow: -2px 2px 0 black;
   border-radius: 24px;
-  height: 379px;
-  width: 296px;
+  height: clamp(350px, 60vh, 500px);
+  width: clamp(320px, 60vw, 700px);
 }
 #carrossel .carrossel-item:hover, #itens-carregando .carrossel-item:hover {
   transform: scale(1.03);
@@ -232,22 +230,23 @@
 #carrossel .carrossel-item .item-imagem, #itens-carregando .carrossel-item .item-imagem {
   align-self: center;
   background-color: white;
+  height: clamp(350px, 60vh, 500px);
+  width: 97%;
   border-radius: 12px;
   margin: 12px;
-  height: 233px;
-  width: 280px;
-  object-fit: cover;
+  overflow: hidden;
 }
 #carrossel .carrossel-item .item-titulo, #itens-carregando .carrossel-item .item-titulo {
   margin: 0 24px;
   color: #EFEFEF;
-  font-size: 16px;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
 }
 #carrossel .carrossel-item .item-tecnologias, #itens-carregando .carrossel-item .item-tecnologias {
   margin: 12px;
   display: flex;
   align-items: center;
   color: #EFEFEF;
+  overflow: hidden;
 }
 #carrossel .carrossel-item .item-tecnologias .imagem-tecnologia, #itens-carregando .carrossel-item .item-tecnologias .imagem-tecnologia {
   height: 50px;
@@ -260,8 +259,8 @@
   box-sizing: border-box;
 }
 #carrossel .item-carregando, #itens-carregando .item-carregando {
-  height: 379px; /* ATUALIZADO PARA MOBILE */
-  width: 296px; /* ATUALIZADO PARA MOBILE */
+  height: clamp(350px, 60vh, 500px);
+  width: clamp(500px, 40vw, 700px);
   background-color: #242834;
   border-radius: 24px;
   animation: pulse 2s ease-in-out infinite;
@@ -296,13 +295,25 @@
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
+  margin: 12px;
+}
+
+.botoes-projetos {
+  display: flex;
+  justify-content: space-between;
+}
+
+a[name=galeria] {
+  display: none;
 }
 
 a[name=galeria-mobile] {
+  display: block;
   align-self: center;
 }
 a[name=galeria-mobile] button {
   align-self: center;
+  margin: 0 8px 0 0;
   height: 50px;
   width: 240px;
   padding: 8px;
@@ -314,25 +325,27 @@ a[name=galeria-mobile] button {
   box-shadow: -2px 2px 0 #242834;
   color: #242834;
 }
-a[name=galeria-mobile] button:hover {
-  background-color: #242834;
-  color: white;
-  cursor: pointer;
-}
 
-a[name=galeria] {
-  display: none;
-}
-
-.botoes-projetos {
-  display: flex;
-  justify-content: space-between;
-  margin-inline: 12px;
-}
-
-@media (min-width: 768px) {
-  .item-img {
-    object-fit: fill;
+@media (min-width: 993px) {
+  #projetos {
+    background-color: transparent;
+  }
+  #projetos h2 {
+    justify-content: end;
+    padding-inline: 70%;
+  }
+  #carrossel {
+    margin-left: 0;
+  }
+  #carrossel .carrossel-item {
+    height: clamp(350px, 60vh, 500px);
+    width: clamp(500px, 40vw, 700px);
+  }
+  #carrossel .carrossel-item .item-tecnologias {
+    overflow: visible;
+  }
+  .btn-navegacao {
+    margin: 0;
   }
   a[name=galeria-mobile] {
     display: none;
@@ -343,6 +356,7 @@ a[name=galeria] {
   }
   a[name=galeria] button {
     align-self: center;
+    margin: 0 8px 0 0;
     height: 50px;
     width: 120px;
     padding: 8px;
@@ -358,41 +372,6 @@ a[name=galeria] {
     background-color: #242834;
     color: white;
     cursor: pointer;
-  }
-  .btn-navegacao {
-    width: 120px;
-  }
-  #carrossel {
-    margin-inline: 24px;
-  }
-  #carrossel .carrossel-item {
-    height: clamp(350px, 60vh, 500px);
-    width: clamp(500px, 40vw, 700px);
-  }
-  #carrossel .carrossel-item .item-imagem {
-    height: clamp(200px, 40vh, 350px);
-    width: 97%;
-  }
-  #carrossel .carrossel-item .item-titulo {
-    font-size: clamp(1.5rem, 2vw, 2.2rem);
-  }
-  #carrossel .item-carregando {
-    height: clamp(350px, 60vh, 500px);
-    width: clamp(500px, 40vw, 700px);
-  }
-  .botoes-projetos {
-    margin-inline: 24px;
-  }
-}
-@media (min-width: 993px) {
-  #projetos {
-    background: none;
-  }
-  #projetos h2 {
-    display: flex;
-    justify-content: end;
-    padding-inline: 70%;
-    align-self: auto;
   }
 }
 #habilidades {
@@ -489,7 +468,6 @@ a[name=galeria] {
 }
 #cartao p, #cartao h2 {
   color: white;
-  padding: 16px;
 }
 
 .foto-container {
@@ -535,6 +513,9 @@ a[name=galeria] {
   #cartao {
     padding: 140px 32px;
   }
+  #cartao p, #cartao h2 {
+    padding: 16px;
+  }
 }
 #contato {
   display: flex;
@@ -556,41 +537,40 @@ a[name=galeria] {
   justify-content: center;
   align-items: center;
 }
-
-#botoes {
+#contato #botoes {
   display: flex;
 }
-#botoes a {
+#contato #botoes a {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
   border-radius: 16px;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   box-shadow: -4px 4px black;
 }
-#botoes a + a {
+#contato #botoes a + a {
   margin-left: 20px;
 }
-#botoes a#github-home {
+#contato #botoes a#github-home {
   background-color: #2A2A2A;
 }
-#botoes a#github-home img {
+#contato #botoes a#github-home img {
   height: 50px;
   width: 50px;
 }
-#botoes a#linkedin-home {
+#contato #botoes a#linkedin-home {
   background-color: #0288D1;
 }
-#botoes a#linkedin-home img {
+#contato #botoes a#linkedin-home img {
   height: 66px;
   width: 66px;
 }
-#botoes a#gmail-home {
+#contato #botoes a.gmail-home {
   background-color: #F0EFEF;
 }
-#botoes a#gmail-home img {
+#contato #botoes a.gmail-home img {
   height: 58px;
   width: 58px;
 }
@@ -715,7 +695,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 1;
     background-color: #7D53FF;
     clip-path: polygon(0% 81%, 50% 100%, 100% 81%, 100% 100%, 0% 100%);
   }
@@ -723,7 +703,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 300vh;
-    z-index: 2;
+    z-index: -1;
     background-color: #7D53FF;
     clip-path: polygon(0% 93.67%, 50% 100%, 100% 93.67%, 100% 100%, 0% 100%);
   }

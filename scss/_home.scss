@@ -17,6 +17,7 @@
   width: v.$avatar-size-mobile;
   z-index: 10;
   border-radius: 50%;
+  border: 2px solid black;
 }
 
 #home-direita {
@@ -53,6 +54,7 @@
   #botoes {
     display: flex;
     margin: 32px 0 48px 0;
+    z-index: 3;
 
     a {
       display: flex;
@@ -94,7 +96,8 @@
   }
   #conheca-projetos {
     display: inline-block; 
-    text-decoration: none; 
+    text-decoration: none;
+    z-index: 3;
 
     font-size: v.$font-md;
     padding: 10px 16px;
