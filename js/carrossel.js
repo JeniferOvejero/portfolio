@@ -31,23 +31,30 @@ export function inicializarCarrossel() {
     carrossel.style.transform = `translateX(-${deslocamento}px)`;
   }
 
-  fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD_u0fe0J7OpoZQTHnhqIZ9HLi7ZJYV8c6idmA/exec")
+fetch("https://script.google.com/macros/s/AKfycbxFJ1GHzO_tb0AQUE1aYXp7ha8Lz1hCkD_u0fe0J7OpoZQTHnhqIZ9HLi7ZJYV8c6idmA/exec")
     .then(response => response.json())
     .then(dados => {
       carregandoItem.style.display = "none";
       dados.forEach(projeto => {
-        const item = document.createElement("div");
+        const nomeDoProjeto = projeto['Nome do Projeto'];
+        const linkDoProjeto = projeto['Link'];
+
+        const item = document.createElement("a");
+        item.href = linkDoProjeto;
+        item.target = "_blank"; // Abre o link em uma nova aba
         item.className = "carrossel-item";
+
         const tecnologiasHtml = projeto['Tecnologias'].split(',').map(tec => {
           const key = tec.trim().toLowerCase();
           const src = techIcons[key] || "";
           if (!src) return `| ${key} | `;
           return `<img src="${src}" alt="${tec.trim()}" class="imagem-tecnologia">`;
         }).join('');
+
         item.innerHTML = `
           <div class="item">
             <img src="${projeto['Imagem']}" alt="Imagem do projeto" class="item-imagem">
-            <h3 class="item-titulo">${projeto['Nome do Projeto']}</h3>
+            <h3 class="item-titulo">${nomeDoProjeto}</h3>
             <div class="item-tecnologias">${tecnologiasHtml}</div>
           </div>
         `;
