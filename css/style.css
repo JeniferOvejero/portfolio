@@ -212,8 +212,8 @@
   border: solid 2px black;
   box-shadow: -2px 2px 0 black;
   border-radius: 24px;
-  height: clamp(350px, 60vh, 500px);
-  width: clamp(320px, 60vw, 700px);
+  height: clamp(330px, 60vh, 500px);
+  width: clamp(290px, 65vw, 700px);
 }
 #carrossel .carrossel-item:hover, #itens-carregando .carrossel-item:hover {
   transform: scale(1.03);
@@ -230,7 +230,7 @@
 #carrossel .carrossel-item .item-imagem, #itens-carregando .carrossel-item .item-imagem {
   align-self: center;
   background-color: white;
-  height: clamp(350px, 60vh, 500px);
+  height: 70%;
   width: 97%;
   border-radius: 12px;
   margin: 12px;
@@ -258,9 +258,12 @@
   padding: 5px;
   box-sizing: border-box;
 }
+#carrossel #itens-carregando, #itens-carregando #itens-carregando {
+  margin-left: 0;
+}
 #carrossel .item-carregando, #itens-carregando .item-carregando {
-  height: clamp(350px, 60vh, 500px);
-  width: clamp(500px, 40vw, 700px);
+  height: clamp(330px, 60vh, 500px);
+  width: clamp(290px, 65vw, 700px);
   background-color: #242834;
   border-radius: 24px;
   animation: pulse 2s ease-in-out infinite;

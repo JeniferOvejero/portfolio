@@ -41,8 +41,8 @@
     box-shadow: -2px 2px 0 black;
     border-radius: 24px;
 
-    height: clamp(350px, 60vh, 500px);
-    width: clamp(320px, 60vw, 700px);
+    height: clamp(330px, 60vh, 500px);
+    width: clamp(290px, 65vw, 700px);
     
     &:hover {
       transform: scale(1.03);
@@ -60,7 +60,7 @@
       &-imagem {
         align-self: center;
         background-color: white;
-        height: v.$item-carrossel-h;//200px;
+        height: 70%;
         width: 97%;
         border-radius: 12px;
         margin: 12px;
@@ -93,10 +93,13 @@
       }
     }
   }
+  #itens-carregando{
+    margin-left: 0;
+  }
 
   .item-carregando {
-    height: v.$item-carrossel-h;
-    width: v.$item-carrossel-w;
+    height: clamp(330px, 60vh, 500px);
+    width: clamp(290px, 65vw, 700px);
     background-color: v.$dark-color;
     border-radius: 24px;
     animation: pulse 2s ease-in-out infinite;
