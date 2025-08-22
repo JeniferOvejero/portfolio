@@ -18,6 +18,7 @@ $font-xl: clamp(1.6rem, 3vw, 2.5rem);   // ~28-40px
 $font-xxl: clamp(2.5rem, 4vw, 3.5rem);   // ~40-56px
 
 $avatar-size: clamp(250px, 30vw, 600px);
+$avatar-size-mobile: clamp(150px, 30vh, 250px);
 
 $item-carrossel-h: clamp(350px, 60vh, 500px);
 $item-carrossel-w: clamp(500px, 40vw, 700px);
