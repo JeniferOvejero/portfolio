@@ -1,7 +1,7 @@
 #home {
   position: relative;
   background: linear-gradient(to bottom, #7D53FF 33%, white 33%);
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
 }
