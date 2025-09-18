@@ -1,5 +1,7 @@
 # Portfólio de Desenvolvedora WEB e UI/UX
 
+link de acesso: https://jeniferovejero.github.io/portfolio/
+
 Bem-vindo(a) ao meu portfólio de projetos!
 
 Este repositório é uma coleção dos meus trabalhos e uma demonstração das minhas habilidades como desenvolvedor(a). Foi construído com foco em clean code, responsividade e interatividade, utilizando tecnologias front-end e integração com a suíte de aplicativos do Google.
